@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Multiverso | Rick and Morty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <h2>Portal Multiverso</h2>
+      <a href="#personagens">Personagens</a>
+    </nav>
+
+    <section class="hero-content">
+      <div>
+        <p class="tag">API pública + JavaScript</p>
+        <h1>Explore personagens de Rick and Morty em tempo real</h1>
+        <p>
+          Este site consome dados reais da Rick and Morty API usando Fetch e cria cards automaticamente com JavaScript.
+        </p>
+        <a class="botao" href="#personagens">Ver personagens</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="sobre">
+      <h2>Sobre o projeto</h2>
+      <p>
+        A proposta deste site é demonstrar o consumo de uma API pública relacionada ao mundo dos desenhos animados.
+        Os dados são carregados dinamicamente, sem cards fixos no HTML.
+      </p>
+    </section>
+
+    <section class="controles" id="personagens">
+      <div>
+        <h2>Personagens</h2>
+        <p>Pesquise pelo nome ou filtre pelo status do personagem.</p>
+      </div>
+
+      <div class="filtros">
+        <input type="text" id="campoBusca" placeholder="Buscar personagem...">
+        <select id="filtroStatus">
+          <option value="">Todos</option>
+          <option value="Alive">Vivos</option>
+          <option value="Dead">Mortos</option>
+          <option value="unknown">Desconhecido</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="mensagem" class="mensagem">Carregando personagens...</p>
+    <section id="cardsContainer" class="cards-container"></section>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
